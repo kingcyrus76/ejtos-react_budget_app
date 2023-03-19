@@ -13,6 +13,8 @@ import Remaining from './components/Remaining';
 
 
 import { AppProvider } from './context/AppContext';
+import Currency from './components/Currency';
+
 const App = () => {
     return (
         <AppProvider>
@@ -22,7 +24,8 @@ const App = () => {
                         {/* Add Budget component here under */}        
                         <div className='col-sm'>
                             <Budget />
-                        </div>
+                    
+                    </div>
                         {/* Add Remaining component here under */}        
                         <div className='col-sm'>
                             <Remaining />
@@ -30,18 +33,27 @@ const App = () => {
                         {/* Add ExpenseTotal component here under */}        
                         <div className='col-sm'>
                             <ExpenseTotal />
-                        </div>                      
+                        </div> 
+                        {/* Add Currency component here under * */}
+                        <div className='col-sm'>
+                            <Currency />
+                        </div>                     
+                    </div>
+                    <div className='row mt-3'>
                         {/* Add ExpenseList component here under */}         
                         <div className='col-sm'>
                             <ExpenseList />
                         </div>
+                    </div>
                         {/* Add ExpenseItem component here under */}        
                         
-                        {/* Add AllocationForm component here under */}        
+                        {/* Add AllocationForm component here under */}
+                    <h3 className='mt-3'>Change allocation</h3>
+                    <div className='row mt-3'>        
                         <div className='col-sm'>
                             <AllocationForm />
                         </div>
-                </div>
+                    </div>
             </div>
         </AppProvider>
     );
